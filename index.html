@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libur Idul Adha 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
+    <title>Libur Semester 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         :root {
-            --primary-gold: #FFD700;
-            --dark-green: #064e3b;
-            --light-green: #10b981;
+            --pure-white: #FFFFFF;
+            --pure-black: #000000;
+            --dark-gray: #1a1a1a;
+            --mid-gray: #555555;
+            --light-gray: #cccccc;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle, var(--light-green) 0%, var(--dark-green) 100%);
+            background: radial-gradient(circle, var(--mid-gray) 0%, var(--pure-black) 100%);
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: white;
+            color: var(--pure-white);
             overflow: hidden;
         }
 
@@ -32,7 +34,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, #10b981 0%, #064e3b 100%);
+            background: radial-gradient(circle, var(--mid-gray) 0%, var(--pure-black) 100%);
             z-index: 9999;
             display: flex;
             flex-direction: column;
@@ -42,17 +44,18 @@
         }
 
         .nuro-logo {
-            font-size: 4rem;
+            font-size: 3rem; /* Sedikit disesuaikan agar teks panjang tidak tumpah */
             font-weight: 900;
-            color: var(--primary-gold);
-            letter-spacing: 8px;
+            color: var(--pure-white);
+            letter-spacing: 5px;
             margin: 0;
+            text-align: center;
             animation: pulse-glow 1.5s infinite alternate;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
         .loading-text {
-            color: white;
+            color: var(--light-gray);
             margin-top: 15px;
             font-size: 1rem;
             letter-spacing: 3px;
@@ -61,8 +64,8 @@
         }
 
         @keyframes pulse-glow {
-            0% { transform: scale(0.95); text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
-            100% { transform: scale(1.05); text-shadow: 0 0 40px rgba(255, 215, 0, 0.9); }
+            0% { transform: scale(0.95); text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+            100% { transform: scale(1.05); text-shadow: 0 0 40px rgba(255, 255, 255, 0.9); }
         }
 
         @keyframes blink {
@@ -77,13 +80,13 @@
 
         /* --- MAIN CARD STYLES --- */
         .card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 215, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 30px;
             padding: 2.5rem;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             max-width: 550px;
             width: 90%;
             position: relative;
@@ -99,18 +102,12 @@
             transform: translateY(0) scale(1);
         }
 
-        .arabic {
-            font-family: 'Amiri', serif;
-            font-size: 2.5rem;
-            color: var(--primary-gold);
-            margin-bottom: 0.5rem;
-        }
-
         h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 2rem;
             letter-spacing: 1px;
             text-transform: uppercase;
+            color: var(--pure-white);
         }
 
         .countdown-container {
@@ -122,12 +119,12 @@
         }
 
         .time-box {
-            background: white;
-            color: var(--dark-green);
+            background: var(--pure-white);
+            color: var(--pure-black);
             padding: 15px;
             border-radius: 15px;
             min-width: 70px;
-            box-shadow: 0 8px 0 var(--primary-gold);
+            box-shadow: 0 8px 0 var(--light-gray);
         }
 
         .time-box span {
@@ -146,40 +143,44 @@
             font-style: italic;
             opacity: 0.9;
             margin-top: 1rem;
+            color: var(--light-gray);
         }
 
         .btn-celebrate {
             margin-top: 20px;
-            background: var(--primary-gold);
+            background: var(--pure-white);
             border: none;
             padding: 10px 20px;
             border-radius: 50px;
-            color: var(--dark-green);
+            color: var(--pure-black);
             font-weight: bold;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
         }
 
         .btn-celebrate:hover { 
             transform: scale(1.1); 
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            background: var(--light-gray);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
         }
 
-        .decoration { font-size: 2rem; }
+        .decoration { 
+            font-size: 2.5rem; 
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
 
 <div id="loader">
-    <h1 class="nuro-logo">NURO</h1>
+    <h1 class="nuro-logo">KENAN GANTENG</h1>
     <div class="loading-text">Memuat Waktu...</div>
 </div>
 
 <div class="card" id="mainCard">
-    <div class="decoration">🕌 🕋 🐑</div>
-    <div class="arabic">عيد الأضحى</div>
-    <h1>Libur Idul Adha</h1>
-    <p>Menuju 26 Mei 2026</p>
+    <div class="decoration">🎓 🎒 🎮</div>
+    <h1>Liburan Semester</h1>
+    <p>Menuju 18 Juni 2026</p>
 
     <div class="countdown-container">
         <div class="time-box">
@@ -200,7 +201,7 @@
         </div>
     </div>
 
-    <p class="message" id="quote">"Semoga lelahmu di pesantren menjadi lillah."</p>
+    <p class="message" id="quote">"Waktunya istirahat, rebahan, dan lupakan tugas sejenak!"</p>
     <button class="btn-celebrate" onclick="launchConfetti()">Klik Semangat!</button>
 </div>
 
@@ -222,7 +223,8 @@
 
     // FUNGSI COUNTDOWN REAL-TIME
     function updateCountdown() {
-        const targetDate = new Date('May 26, 2026 00:00:00').getTime();
+        // SET TANGGAL KE 18 JUNI 2026
+        const targetDate = new Date('June 18, 2026 00:00:00').getTime();
         const now = new Date().getTime();
         const diff = targetDate - now;
 
@@ -236,19 +238,20 @@
         document.getElementById('mins').innerText = m < 10 ? '0'+m : m;
         document.getElementById('secs').innerText = s < 10 ? '0'+s : s;
 
+        // JIKA WAKTU HABIS
         if (diff < 0) {
             clearInterval(timer);
-            document.getElementById("mainCard").innerHTML = "<h1>SELAMAT LIBURAN!</h1><p>Waktunya Liburan, Selamat Idul Adha</p>";
+            document.getElementById("mainCard").innerHTML = "<h1>SELAMAT LIBURAN!</h1><p>Waktunya Liburan Semester, mari bersantai!</p>";
         }
     }
 
-    // FUNGSI KONFETI
+    // FUNGSI KONFETI (DIUBAH KE WARNA MONOKROM/GREYSCALE)
     function launchConfetti() {
         confetti({
             particleCount: 150,
             spread: 70,
             origin: { y: 0.6 },
-            colors: ['#FFD700', '#FFFFFF', '#10b981']
+            colors: ['#000000', '#FFFFFF', '#555555', '#CCCCCC']
         });
     }
 
